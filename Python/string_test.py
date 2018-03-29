@@ -39,10 +39,22 @@ for i in str:
         if i==c:
             ex+=i
 print(ex)'''
-str=input()
+'''str=input()
 str=str.lower()
 new_str=''.join(reversed(str))
 if new_str==str:
     print('Polindrome')
 else:
-    print('Non Polindrome')
+    print('Non Polindrome')'''
+str=list(input())
+n=len(str)
+new_str=[0]*n
+for i in range(n):
+    if i==len(str)-1 and i%2==0:
+        new_str[i]=str[i]
+        break
+    elif i==0 or i%2==0:
+        new_str[i+1]=str[i]
+    else:
+        new_str[i-1]=str[i]
+print(''.join(new_str))
