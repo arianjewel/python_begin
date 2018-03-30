@@ -62,7 +62,13 @@ str='-'.join(li)
 
 
 
-li=[]
+'''li=[]
 for i in range(1,11):
     li.append(i)
-print(li)
+print(li)'''
+
+
+
+li=[1,2,3,4]
+new_li=[x*x for x in li]
+print(new_li)
