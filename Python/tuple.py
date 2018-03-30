@@ -1,5 +1,6 @@
 x=() #empty tuple
 x=1, #one element tuple
+x=(1,) #one element tuple
 x=(1,2,3) #multi-element tuple
 x=1,2,3 #multi-element tuple
 
