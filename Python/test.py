@@ -15,5 +15,12 @@ j=1
 while j<11:
     print(i,'x',j,'=',i*j)
     j+=1'''
-def add(n1,n2):
-    return n1+n2
+
+
+n1=int(input())
+for x in range(2,n1):
+    if n1%x!=0:
+        continue
+    else:
+        print('ok')
+        break

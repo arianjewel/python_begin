@@ -83,7 +83,7 @@ while True:
 
 
 #is_prime2 & is_prime3 check with timeit.....which is efficient
-import math
+'''import math
 def is_prime3(n=1013):
     if n<2:
         return False
@@ -114,4 +114,38 @@ def is_prime2(n=1013):
 import timeit
 t1=timeit.timeit(is_prime2)
 t2=timeit.timeit(is_prime3)
-print(t1,t2,t1/t2)
+print(t1,t2,t1/t2)'''
+
+
+
+import math
+def is_prime4(a,b):
+    li=[]
+    str1=''
+    for x in range(a,b+1):
+        if x%2==0:
+            continue
+        if x==2:
+            li.append(str(x))
+        m=int(math.sqrt(x))
+        m+=1
+        for i in range(3,m,2):
+            if x%i==0:
+                loop2=False
+                break
+        if loop2 is False:
+            continue
+        else:
+            li.append(str1(x))
+
+    str1=','.join(li)
+    if str1=='':
+        print('there is no prime number between',a,'&',b)
+    else:
+        print('the prime number between',a,'&',b,'is:',str1)
+n1=int(input('please enter a number: '))
+n2=int(input('please enter another number which greater than previous number: '))
+if n1>n2:
+    print('please enter small number first and then enter a greater number')
+else:
+    is_prime4(n1,n2)
