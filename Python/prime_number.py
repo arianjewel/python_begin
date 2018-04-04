@@ -122,21 +122,23 @@ import math
 def is_prime4(a,b):
     li=[]
     str1=''
+    loop2=True
     for x in range(a,b+1):
         if x%2==0:
             continue
         if x==2:
             li.append(str(x))
-        m=int(math.sqrt(x))
-        m+=1
-        for i in range(3,m,2):
-            if x%i==0:
-                loop2=False
-                break
-        if loop2 is False:
-            continue
         else:
-            li.append(str1(x))
+            m=int(math.sqrt(x))
+            m+=1
+            for i in range(3,m,2):
+                if x%i==0:
+                    loop2=False
+                    break
+            if loop2 is False:
+                continue
+            else:
+                li.append(str(x))
 
     str1=','.join(li)
     if str1=='':
