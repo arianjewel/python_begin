@@ -14,30 +14,22 @@ print(new_text2)'''
 capital='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 small='abcdefghijklmnopqrstuvwxyz'
 digit='0123456789'
-extra='!,.?\'\"'
 up=''
 lo=''
 dig=''
 ex=''
 for i in str:
-    for c in capital:
-        if i==c:
-            up+=i
+    if i in capital:
+        up+=i
+    elif i in small:
+        lo+=i
+    elif i in digit:
+        dig+=i
+    else:
+        ex+=i
 print(up)
-for i in str:
-    for c in small:
-        if i==c:
-            lo+=i
 print(lo)
-for i in str:
-    for c in digit:
-        if i==c:
-            dig+=i
 print(dig)
-for i in str:
-    for c in extra:
-        if i==c:
-            ex+=i
 print(ex)'''
 '''str=input()
 str=str.lower()
@@ -47,7 +39,7 @@ if new_str==str:
 else:
     print('Non Polindrome')'''
 str=list(input())
-n=len(str)
+n=len(str) 
 new_str=[0]*n
 for i in range(n):
     if i==len(str)-1 and i%2==0:
