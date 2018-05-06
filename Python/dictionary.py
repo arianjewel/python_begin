@@ -39,3 +39,12 @@ for division in divisions:
     district=bd_division_info[division]['district']
     count+=district
 print('total district in bangladesh is',count)'''
+
+
+
+marks={1:78,2:76,5:73,4:65,3:56}
+input=int(input())
+if input not in marks:
+    print("sorry")
+else:
+    print(marks[input])
